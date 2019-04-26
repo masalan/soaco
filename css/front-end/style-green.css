@@ -1,0 +1,918 @@
+
+/* Font Family */
+@font-face {
+	
+	font-weight: normal;
+	src: url(../fonts/Droid_Sans/DroidSans-Regular.ttf) format('ttf');
+}
+@font-face {
+	
+	font-weight: bold;
+	src: url(../fonts/Droid_Sans/DroidSans-Bold.ttf) format('ttf');
+}
+
+/* Modify Bootstrap Base */
+.navbar.transparent.navbar-inverse .navbar-inner {
+	background: rgba(0,0,0,0.4);
+}
+
+.form-inline > * {
+	margin: 5px 10px;
+}
+
+body, html {
+	height: 100%;
+	font-family: 'DroidSans';
+	background-color: #fff;
+	color: #666;
+	font-size: 14px;
+	line-height: 1.72;
+}
+
+h1, h2, h3, h4 {
+	color: #7CC8CF;
+}
+@media (min-width: 576px) {
+	h1, h2, h3 {
+		letter-spacing: 0.2em;
+	}
+}
+
+/* The hero image */
+.hero-image {
+	/* Used Image */
+	background-image: url("../../images/homepage-cover.jpeg");
+
+	/* Set a specific height */
+	height: 90%;
+
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+	font-family: 'Lora';
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.hero-text-left {
+	text-align: left;
+}
+.hero-text h1{
+	font-size: 4em;
+}
+.play-store img {
+	height: 50px;
+}
+
+/* The hero image (detail) */
+.hero-image-sm {
+
+	/* Set a specific height */
+	height: 50%;
+
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.layer {
+	/*background-color: rgba(254, 254, 254, 0.7);*/
+	position: absolute;
+	/*top: 50%;*/
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	/* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */
+	background: -webkit-linear-gradient(rgba(80, 80, 80, 0.01), rgba(80, 80, 80, 1));
+	background: -o-linear-gradient(rgba(80, 80, 80, 0.01), rgba(80, 80, 80, 1));
+	background: linear-gradient(rgba(80, 80, 80, 0.01), rgba(80, 80, 80, 1)); 
+}
+/* Place text in the middle of the image */
+.hero-text-sm {
+	font-family: 'Lora';
+	text-align: center;
+	position: absolute;
+	/*top: 75%;*/
+	bottom: 0%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	color: #eee;
+}
+.hero-text-sm-left {
+	text-align: left;
+}
+.hero-text-sm h1{
+	font-size: 2em;
+	color: white;
+}
+
+/* Card Overlay */
+.overlay-container {
+	position: relative;
+	width: 50%;
+}
+
+.overlay-container .image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.overlay-container .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: black;
+}
+
+.overlay-container:hover .overlay {
+	opacity: 0.8;
+}
+
+.overlay-container .text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+
+/* Scroll to Top */
+#scroll-top {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 50px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: red; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+}
+
+#scroll-top:hover {
+	background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* Style all font awesome icons */
+.hero-text-sm .fa {
+	padding: 10px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+}
+
+/* Add a hover effect if you want */
+.hero-text-sm .fa:hover {
+	opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+.hero-text-sm .fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+.hero-text-sm .fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+.hero-text-sm .fa-google {
+	background: #dd4b39;
+	color: white;
+}
+.hero-text-sm .fa-instagram {
+	background: #125688;
+	color: white;
+}
+.hero-text-sm .fa-youtube {
+	background: #bb0000;
+	color: white;
+}
+
+/* Responsive */
+/* Centered text */
+.overlay-container .centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Carousel Height */
+.detail-cover img {
+	max-height: 300px;
+	/* Set a specific height */
+	height: 50%;
+	object-fit: cover;
+}
+
+/* Google Map */
+#map {
+	height: 300px;
+	width: 100%;
+}
+
+/* Review Section */
+.review .avatar {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+
+.user-actions .fa{
+	color: #FAB400;
+}
+
+/* Profile Cover Photo */
+.profile-cover{
+	height: 250px;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* HOME PAGE */
+.navbar-brand {
+	color: #353535;
+}
+#main-nav .navbar-brand {
+	color: #000 !important;
+}
+.nav {
+	margin-right: 50px;
+}
+.nav-link {
+	color: #777;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-right: 30px;
+}
+#main-nav .nav-link {
+	color: #000 !important;
+}
+.dropdown-menu {
+	border-radius: 0;
+	background-color: #7CC8CF;
+	transition: all .3s ease;
+	padding: 20px 10px;
+	/*margin-left: -20px;*/
+}
+.navbar-collapse {
+	z-index:9000;
+}
+.dropdown-menu a {
+	font-size: 12px;
+	color: #000;
+	transition: all .3s ease;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+}
+.dropdown-menu > a:hover, .dropdown-menu > a:focus {
+	display: block;
+	color: #000;
+	margin-left: 8px;
+	background-color: transparent;
+	background-image: none;
+	filter: none;
+	cursor: pointer;
+}
+.navbar-collapse {
+	background-color: #ccc;
+	padding: 10px;
+}
+@media (min-width: 768px) {
+	.nav-item:hover > .dropdown-menu{
+		display: block;
+	}
+	.navbar-collapse {
+		background: transparent;
+	}
+	.dropdown-menu > a {
+		min-width: 150px;
+	}
+}
+.navbar-toggle, .icon-bar {
+	border:1px solid orange;
+}
+/*.navbar-toggler-icon {
+color: red;
+}*/
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: black;
+}
+.homepage-title {
+	color: #151515;
+}
+.homepage-container {
+	background-color: #7CC8CF;
+}
+.homagepage-divider {
+	display: block;
+	min-height: 80px;
+}
+.homepage-city-cover {
+	/*width: 95%;*/
+	height: 200px;
+	object-fit: cover;
+}
+.homepage-cityname, .itemlist-itemname {
+	color: #000;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+}
+.item {
+	color: #999;
+	background-color: #F1FCFC;
+}
+.homepage-cityname .white {
+	color: #fff;
+}
+.homepage-cityname small.fa {
+	margin-bottom: 10px;
+}
+.homepage-loadmore {
+	background-color: transparent;
+
+	font-size: 80%;
+	border-radius: 20px;
+	border-color: #ccc;
+	color: #ccc;
+	border-width: 1px;
+	width: 200px;
+}
+.homepage-loadmore:hover {
+	color: #fff;
+	border-color: #fff;
+}
+.loadmore-items .homepage-loadmore {
+	border-color: #999;
+	color: #999;
+}
+.loadmore-items .homepage-loadmore:hover {
+	border-color: #93D8D7;
+	color: #fff;
+	background-color: #93D8D7;
+}
+.homepage-aboutus {
+	background-color: white;
+	overflow: hidden;
+}
+.homepage-aboutus h4 {
+	font-family: 'Droid Sans';
+	letter-spacing: 0.2em;
+	margin: 0 0 10px;
+	color: #151515;
+	text-transform: uppercase;
+}
+.homepage-aboutus p {
+	display: block;
+	font-family: 'Droid Sans';
+	font-size: 14px;
+	line-height: 1.72;
+}
+.homepage-aboutus img {
+	object-fit: cover;
+}
+.homepage-aboutus .fa {
+	padding: 10px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 25px;
+}
+
+/* Add a hover effect if you want */
+.homepage-aboutus .fa:hover {
+	opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+.homepage-aboutus .fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+.homepage-aboutus .fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+.homepage-aboutus .fa-google {
+	background: #dd4b39;
+	color: white;
+}
+.homepage-aboutus .fa-instagram {
+	background: #125688;
+	color: white;
+}
+.homepage-aboutus .fa-youtube {
+	background: #bb0000;
+	color: white;
+}
+.homepage-aboutus .fa-pinterest {
+	background: #bb0000;
+	color: white;
+}
+footer {
+	background-color: #7CC8CF;
+	color: #000;
+}
+footer .copyright{
+	padding: 20px 0px;
+	font-size: 12px;
+	color: #000;
+	display: block;
+}
+footer .backtotop{
+	color: #000;
+	float: right;
+}
+
+/* CITY PAGE */
+.ps-bg-color {
+	/*background-color: #151515;*/
+	background-color: #fff;
+}
+
+.citypage-filter .homepage-loadmore {
+	padding: 10px 0px;
+	border-color: #999;
+	color: #999;
+	transition: all .3s ease;
+}
+.citypage-filter .homepage-loadmore:hover{
+	border-color: #666;
+	color: #fff;
+	background-color: #464646;
+}
+.citypage-news {
+	line-height: 1.72;
+}
+.citypage-news h3 {
+	color: #151515;
+	font-size: 18px;
+}
+.citypage-news p, .citypage-news a {
+	color: #666;
+	font-size: 14px;
+	line-height: 1.72;
+}
+a.readmore {
+	color: #1147AA;
+	display: block;
+	margin-top: 10px;
+}
+.citypage-news small {
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #999;
+}
+.citypage-news-loadmore {
+	background-color: transparent;
+
+	font-size: 80%;
+	border-radius: 20px;
+	border-color: #aaa;
+	color: #151515;
+	border-width: 1px;
+	width: 200px;
+}
+.citypage-news-loadmore:hover {
+	color: #000;
+	border-color: #111;
+}
+.detailpage {
+	background-color: white;
+}
+.detailpage .title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 1.2;
+	margin-bottom: 13px;
+}
+.detailpage .text {
+	display: block;
+	font-family: 'Droid Sans';
+	font-size: 14px;
+	line-height: 1.72;
+}
+.detailpage .item-info a{
+	color: #111;
+	font-size: 12px;
+}
+.detailpage p.contact-info {
+	font-family: 'Droid Sans';
+	font-size: 14px;
+}
+
+.user-comment .author {
+	display: inline-block;
+	font-size: 14px;
+	letter-spacing: 0;
+	margin-right: 17px;
+	margin-bottom: 0;
+	color: #151515;
+}
+.user-comment .date {
+	font-family: 'Droid Sans';
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #999;
+}
+.user-comment .comment {
+	color: #666;
+}
+.comment-title {
+}
+
+/* Controls */
+input, select, textarea {
+	max-width: 100%;
+	padding: 0 20px;
+
+	background: #f0f0f0;
+	color: #666;
+
+	border-color: transparent;
+	box-sizing: border-box;
+	margin: 0;
+	border-radius: 0;
+
+	font-size: 10px;
+	/*text-transform: uppercase;*/
+	letter-spacing: 0.2em;
+
+	-webkit-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+
+	outline: none;
+}
+input[type="password"] {
+	text-transform: none;
+}
+input.profile-email {
+	width: 100%;
+}
+textarea {
+	text-transform: none;
+}
+.comment-textarea {
+	padding: 15px 20px;
+	display: inline-block;
+	/*margin-bottom: 15px;*/
+	width: 100%;
+}
+textarea.about-me {
+	width: 100%;
+	padding: 15px 20px;
+	display: inline-block;
+}
+
+#login-form input, #signup-form input {
+	padding: 10px;
+	display: inline-block;
+	margin-top: 15px;
+	width: 100%;
+}
+
+.submit-comment {
+	vertical-align: middle;
+	width: 100%;
+	text-align: center;
+}
+
+.submit-comment button {
+	background-color: transparent;
+
+	font-size: 80%;
+	border-radius: 20px;
+	border-width: 1px;
+	width: 200px;
+
+	border-color: #999;
+	color: #999;
+}
+.submit-comment button:hover {
+	border-color: #93D8D7;
+	color: #fff;
+	background-color: #93D8D7;
+}
+.inquiry-input input{
+	display: block;
+	width: 100%;
+	margin-top: 15px;
+	padding: 10px 20px;
+}
+.inquiry-input textarea {
+	width: 100%;
+	margin-top: 15px;
+}
+.user-profile {
+
+}
+.profile-title {
+	font-size: 24px;
+	font-family: 'Droid Sans';
+	color: #151515;
+}
+.profile .avatar, .list-item .avatar {
+	height: 150px;
+	width: 150px;
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	object-fit: cover;
+	object-position: bottom;
+}
+.list-item h4 a {
+	color: #666;
+}
+.list-item .avatar {
+	height: 100px;
+	width: 100px;
+}
+.user-data ul{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.user-data ol {
+	padding-left: 0px;
+}
+
+.loadmore-white {
+	border-color: #999;
+	color: #999;
+
+	background-color: transparent;
+
+	font-size: 80%;
+	border-radius: 20px;
+	border-color: #666;
+	color: #666;
+	border-width: 1px;
+	width: 200px;
+	/*margin-top: 15px;*/
+}
+.loadmore-white:hover {
+	border-color: #93D8D7;
+	color: #666;
+	background-color: #93D8D7;
+}
+.loadmore-black {
+	border-color: #666;
+	background-color: #fff;  
+
+	font-size: 80%;
+	border-radius: 20px;
+	border-color: #666;
+	color: #000;
+	border-width: 1px;
+	width: 200px;
+}
+.loadmore-black:hover{
+	border-color: #93D8D7;
+	color: #fff;
+	background-color: #93D8D7;
+}
+span.user-info {
+	display: inline-block;
+	width: 80px;
+	font-size: 12px;
+	font-family: 'Droid Sans';
+	text-transform: uppercase;
+	color: #151515;
+	padding-bottom: 15px;
+}
+
+.user-action-items h4, .user-action-items h5 > a {
+	color: #444;
+}
+.my-review:hover {
+	color: #000;
+}
+.my-review h5 > a{
+	color: #444;
+}
+
+.contact h3 {
+	color: #444;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+.contact input, .contact textarea {
+	padding: 10px 20px;
+	display: inline;
+	width: 100%;
+	margin-top: 15px;
+}
+.contact-info span.fa {
+	font-size: 20px;
+	padding: 5px 15px;
+	/*background: #3B5998;*/
+	/*color: white;*/
+	/*border-radius: 50%;*/
+}
+.contact-info p.info {
+	color: #666;
+	font-family: 'Droid Sans';
+}
+.contact-info img {
+	width: 70px;
+}
+
+/* Image Filter Options */
+.select-hidden {
+	display: none;
+	visibility: hidden;
+	padding-right: 10px;
+}
+
+.select {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	font-size: 16px;
+	/*color: #fff;*/
+	width: 220px;
+	height: 35px;
+
+
+	border-color: #999;
+	color: #666;
+	border-width: 1px;
+	font-size: 80%;
+}
+
+.select-styled {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*background-color: #c0392b;*/
+	padding: 8px 15px;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+
+	background-color: transparent;
+	border: 1px solid #999;
+}
+.select-styled:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border: 7px solid transparent;
+	/*border-color: #fff transparent transparent transparent;*/
+	position: absolute;
+	top: 16px;
+	right: 10px;
+
+	border-color: #999 transparent transparent transparent;
+}
+.select-styled:hover {
+	/*background-color: #b83729;*/
+
+	background-color: #464646;
+	color: #fff;
+}
+.select-styled:active, .select-styled.active {
+	/*background-color: #ab3326;*/
+
+	background-color: #464646;
+	color: #ccc;  
+}
+.select-styled:active:after, .select-styled.active:after {
+	top: 9px;
+	border-color: transparent transparent #fff transparent;
+}
+
+.select-options {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	/*background-color: #ab3326;*/
+
+	background-color: #252525;
+	color: #fff;
+	border: none;
+}
+.select-options li {
+	margin: 0;
+	padding: 8px 0;
+	text-indent: 15px;
+	/*border-top: 1px solid #962d22;*/
+	-moz-transition: all 0.15s ease-in;
+	-o-transition: all 0.15s ease-in;
+	-webkit-transition: all 0.15s ease-in;
+	transition: all 0.15s ease-in;
+
+	/*border: 1px solid #999;*/
+}
+.select-options li:hover {
+	background-color: #464646;
+	color: #fff;
+}
+.select-options li[rel="hide"] {
+	display: none;
+}
+
+/* Jquery Validation Error Message Custom Style */
+.error {
+	color: red;
+}
+.modal {
+	z-index: 9999;
+}
+#item-img-modal img {
+	width: 100%;
+}
+.item {
+	border: 1px solid #ccc;
+}
+.breadcrumb {
+	background: none;
+}
+
+.city-reg-form input, .city-reg-form textarea {
+	padding: 10px;
+	display: inline-block;
+	margin-top: 15px;
+	width: 100%;
+}
+
+.twitter-share-button, .fb-share-button {
+	vertical-align: text-bottom !important;
+}
+footer{
+	height: 80px;
+}
+.sticky-footer {
+	position: absolute;
+	bottom: 0;
+}
+#map-wrapper {
+	height: 600px;
+}
+#map { 
+	position: relative;
+}
+.error-page {
+	background-image: url('../../images/404background.png');
+	height: 85%;
+}
+.error-links a, .error-links > h3 {
+	color: #666;
+}
+.breadcrumb {
+	background-color: #F1FCFC;
+}
+.breadcrumb a {
+	color: #666;
+}
+
+/* blue theme */
+.navbar {
+	background-color: #93D8D7;
+}
+.hero-text-sm h1 {
+	color: #000;
+}
+
+.item-info .fa {
+	font-size: 18px;
+}
